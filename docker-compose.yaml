@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  database: 
+     image: mongo
+     restart: always  
+     environment:
+      - MONGO_INITDB_ROOT_USERNAME=devdb
+      - MONGO_INITDB_ROOT_PASSWORD=devdb123
+     volumes:
+        - chaituvol:/data/db
+     networks:
+       - openshift  
+  javawebapp:
+     build: 
+       context: .
+     image: chaitu1812/javawebapp  
+     environment:
+       - MONGO_DB__HOSTNAME=database
+       - MONGO_DB_USERNAME=devdb
+       - MONGO_DB_PASSWORD=devdb123  
+     restart: always    
+     depends_on: 
+       - database
+     networks:
+       - openshift
+     ports:
+       - 8084:8080
+
+volumes:
+  chaituvol: {}  
+networks:
+  openshift: {}  
