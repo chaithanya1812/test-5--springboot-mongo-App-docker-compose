@@ -3,7 +3,6 @@ services:
   database: 
      image: mongo
      restart: always  
-     environment:
      volumes:
         - chaituvol:/data/db
      networks:
