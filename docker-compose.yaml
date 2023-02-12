@@ -4,8 +4,6 @@ services:
      image: mongo
      restart: always  
      environment:
-      - MONGO_INITDB_ROOT_USERNAME=devdb
-      - MONGO_INITDB_ROOT_PASSWORD=devdb123
      volumes:
         - chaituvol:/data/db
      networks:
@@ -15,9 +13,7 @@ services:
        context: .
      image: chaitu1812/javawebapp  
      environment:
-       - MONGO_DB__HOSTNAME=database
-       - MONGO_DB_USERNAME=devdb
-       - MONGO_DB_PASSWORD=devdb123  
+       - MONGO_DB__HOSTNAME=database  
      restart: always    
      depends_on: 
        - database
