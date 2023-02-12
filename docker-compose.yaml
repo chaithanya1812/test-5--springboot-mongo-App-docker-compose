@@ -12,7 +12,7 @@ services:
        context: .
      image: chaitu1812/javawebapp  
      environment:
-       - MONGO_DB__HOSTNAME=database  
+       - MONGO_DB_HOSTNAME=database  
      restart: always    
      depends_on: 
        - database
