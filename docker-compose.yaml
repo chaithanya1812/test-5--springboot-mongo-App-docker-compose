@@ -9,8 +9,7 @@ services:
        - openshift  
   javawebapp:
      build: 
-       context: .
-     image: chaitu1812/javawebapp  
+       image: chaitu1812/springbootmongo  
      environment:
        - MONGO_DB_HOSTNAME=database  
      restart: always    
