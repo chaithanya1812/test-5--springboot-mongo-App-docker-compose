@@ -8,7 +8,6 @@ services:
      networks:
        - openshift  
   javawebapp:
-     build: 
        image: chaitu1812/springbootmongo  
      environment:
        - MONGO_DB_HOSTNAME=database  
