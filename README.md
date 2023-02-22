@@ -1,6 +1,6 @@
 ## Docker-Compose(environment specific)
 ## Image
-![docker-compose](https://user-images.githubusercontent.com/111736742/220178032-214bd811-acc8-4bbf-9e7c-638ab229f044.jpg)
+![docker-compose (1)](https://user-images.githubusercontent.com/111736742/220506682-63618faa-9758-4144-9398-41a2c4a041b0.jpg)
 ## Launch 3-servers
 Install docker and docker-compose in all 3-servers
 ![name-servers](https://user-images.githubusercontent.com/111736742/220178570-1321ce70-dcb2-404e-abee-88166127a046.png)
